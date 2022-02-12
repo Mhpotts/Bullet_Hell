@@ -1,0 +1,147 @@
+{
+  "waves": {
+    "wave1": {
+      "id": "1",
+      "time": {
+        "startTime": "5",
+        "endTime": "35"
+      },
+      "patterns": [
+        {
+          "id": "spiral1",
+          "type": "spiral",
+          "radius": "100",
+          "forwardMomentum": "50"
+        },
+        {
+          "id": "zigzag1",
+          "type": "zigzag",
+          "speed": "50",
+          "bounds": "100",
+          "goRight": "true"
+        }
+      ],
+      "entities": [
+        {
+          "type": "scorpion",
+          "x": "50",
+          "y": "0",
+          "pattern_id": "spiral1"
+        },
+        {
+          "type": "beetle",
+          "x": "500",
+          "y": "0",
+          "pattern_id": "zigzag1"
+        }
+      ],
+      "enemyAmount": "25"
+
+    },
+    "wave2": {
+      "id": "2",
+      "time": {
+        "startTime": "35",
+        "endTime": "45"
+      },
+      "patterns": [
+        {
+          "type": "BackAndForthPattern",
+          "radius": "100",
+          "forwardMomentum": "50"
+        }
+      ],
+      "entities": [
+        {
+            "type": "MidBoss",
+            "health": "5000",
+            "damage": "1000",
+            "x": "250",
+            "y": "100",
+            "xDimension": "75",
+            "yDimension": "75",
+            "pattern_id": "BackAndForthPattern",
+            "wobble": "50"
+        },
+        {
+          "type": "MissleLauncher",
+          "x": "50",
+          "y": "0",
+          "owner": "MidBoss"
+        }
+      ],
+      "enemyAmount": "30",
+      "bossAmount": "1"
+    },
+    "wave3": {
+      "id": "3",
+      "time": {
+        "startTime": "45",
+        "endTime": "130"
+      },
+      "patterns": [
+        {
+          "type": "spiral",
+          "radius": "100",
+          "forwardMomentum": "50"
+        },
+        {
+          "type": "zigzag",
+          "radius": "100",
+          "forwardMomentum": "50"
+        }
+      ],
+      "entities": [
+        {
+          "type": "scorpion",
+          "x": "50",
+          "y": "0",
+          "pattern_id": "spiral"
+        },
+        {
+          "type": "beetle",
+          "x": "50",
+          "y": "0",
+          "pattern_id": "zigzag"
+        }
+      ],
+      "enemyAmount": "40"
+    },
+    "wave4": {
+      "id": "4",
+      "time": {
+        "startTime": "130",
+        "endTime": "400"
+      },
+      "patterns": [
+        {
+          "type": "backandforth",
+          "radius": "100",
+            "forwardMomentum": "50",
+            "wobble": "50"
+        }
+      ],
+      "entities": [
+        {
+          "type": "FinalBoss",
+          "health": "10000",
+          "damage": "1000",
+          "x": "250",
+          "y": "100",
+          "xDimension": "75",
+          "yDimension": "75",
+          "pattern_id": "BackAndForthPattern"
+        },
+        {
+          "type": "MissleLauncher",
+          "texture": "laserTexture",
+          "x": "50",
+          "y": "0",
+          "owner": "FinalBoss"
+        }
+      ],
+      "enemyAmount": "0",
+      "bossAmount": "1"
+    }
+  }
+}
